@@ -1,18 +1,21 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const authRoutes = require('./routes/auth');
+const cors = require('cors');
 
-const app = express()
+// Importando as rotas
+const authRoutes = require('./routes/auth'); 
+const app = express();
 const PORT = 3000;
 
-// Middleware para ler as requisições HTTP que vierem dp front
-app.use(bodyParse.json())
+app.use(bodyParser.json());
 
+//Habilitando o cors para o funcionamento do código no navegador. 
+app.use(cors());
 
-// Rotas (Isso aqui é o endereço que você vai chamar no front, o que é executado)
-app.use('./api/auth', authRoutes);
+//Fazendo a autenticação das rotas.
+app.use('/api/auth', authRoutes);
 
-
-app.listen(PORT, ()=>{
-    console.log(`Servidor rodando na porta ${PORT}`)
-})
+//iniciando o servidor.
+app.listen(PORT, () => {
+  console.log(`Servidor rodando na porta ${PORT}`);
+});
