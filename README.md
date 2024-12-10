@@ -1,8 +1,8 @@
-# Página de Cadrastro
-### Este site é usado para o usuário fazer cadrastro.
+# Página de Cadastro
+### Este site é usado para o usuário fazer cadastro.
 
-# Como rodar
-### 1. Precisa ter instalado o software: Node.js (https://nodejs.org/en)
+# Como rodar:
+### 1. É necessário instalar o software: Node.js (https://nodejs.org/en)
 ### 2. Clonar o repositório e instalar bibliotecas no terminal:
 ### - node server.js
 ### - npm install express
